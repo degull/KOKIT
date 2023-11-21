@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import * as S from "./Header.styled";
 import MenuBar from "../MenuComponents/MenuBar";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Header(){
   const [menuVisible, setMenuVisible] = useState(false);
@@ -8,7 +10,6 @@ export default function Header(){
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
   };
-
   return (
    
       <S.Container>
